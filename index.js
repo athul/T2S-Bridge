@@ -11,13 +11,9 @@ const {
 
 const tgbot = new TelegramBot(tgtoken)
 const slbot = new SlackBot({ token: sltoken, name: 'TeleSlackoli' });
-const params = { icon_emoji: ':cat:' }
+const params = { icon_emoji: ':shipit:' }
 slbot.on('start', () => {
-    slbot.postMessageToChannel(
-        slchannel,
-        'Telegram Bridge',
-        params
-    );
+   console.log("Slack bot Up")
 })
 
 slbot.on('message', (data) => {
